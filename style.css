@@ -3,3 +3,13 @@ header{
   font-family: 'Rubik', sans-serif;
   font-size: 6rem;
 }
+
+.card{
+  width: 18rem;
+}
+
+#root{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

@@ -1,6 +1,8 @@
+body{
+  font-family: 'Rubik', sans-serif;
+}
 header{
   text-align: center;
-  font-family: 'Rubik', sans-serif;
   font-size: 6rem;
 }
 
@@ -11,6 +13,5 @@ header{
 
 #root{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 }

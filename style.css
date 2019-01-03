@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 header{
     text-align: center;
@@ -69,3 +70,22 @@ header{
    font-family: 'Rubik', sans-serif;
    font-size: 6rem;
  }
+=======
+body{
+  font-family: 'Rubik', sans-serif;
+}
+header{
+  text-align: center;
+  font-size: 6rem;
+}
+
+.card{
+  width: 18rem;
+  height: 26rem;
+}
+
+#root{
+  display: flex;
+  flex-flow: row wrap;
+}
+>>>>>>> Andrea/master

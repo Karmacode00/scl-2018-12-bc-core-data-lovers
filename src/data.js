@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const pokemones = './data/pokemon/pokemon.json';
 let data = '';
 fetch(pokemones)
@@ -87,4 +85,3 @@ computeStats(data) nos permitirá hacer cálculos estadísticos básicos para se
  mostrados de acuerdo a la data proporcionada.
 */
 
->>>>>>> Andrea/master

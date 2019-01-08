@@ -1,9 +1,11 @@
 const pokemones = './data/pokemon/pokemon.json';
+let data = '';
 fetch(pokemones)
   .then(response => response.json())
   .then(data => {
     //console.log(JSON.stringify(data));
     showData(data);
+    return data;
   })
   .catch(error => {
     document.getElementById('root').innerHTML = 'Error: ' + error;
@@ -26,9 +28,29 @@ const showData = (data) => {
         </div>`
     });
     document.getElementById('root').innerHTML = groupPokemon;
-}
+};
 
+const selectType = document.getElementById('type');
 
+selectType.addEventListener('change', ()=> {
+  let condition = selectType.options[selectType.selectedIndex].value;
+  let filtered = window.filterType(data, condition);
+  document.getElementById('root').innerHTML = '';
+  console.log(filtered)
+  filtered.forEach(element => {
+    document.getElementById('root').innerHTML += `<div class="card">
+    <img class="card-img-top" src=${element.img} alt="Card image cap">
+   <div class="card-body">
+     <h5 class="card-title">${element.name} #${element.id}</h5>
+       <p class="card-text"> Type: ${element.type.join(', ')}</p>
+       <p class="card-text"> Weaknesses: ${element.weaknesses.join(', ')}</p>
+   </div>
+   <div class="card-footer">
+     <small class="text-muted"> Hatches from egg: ${element.egg}</small>
+   </div>
+ </div>`
+  })
+});
 
 //window.onload = showData();
 

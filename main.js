@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 window.filterType = (data, condition) =>{
   //console.log(condition); console.log(typeof condition);
   const filteredType = data.filter(element => {
@@ -8,4 +6,3 @@ window.filterType = (data, condition) =>{
   });
   return filteredType;
 };
->>>>>>> Andrea/master

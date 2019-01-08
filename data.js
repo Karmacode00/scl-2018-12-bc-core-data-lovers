@@ -2,10 +2,10 @@ const pokemones = './data/pokemon/pokemon.json';
 let data = '';
 fetch(pokemones)
   .then(response => response.json())
-  .then(data => {
-    //console.log(JSON.stringify(data));
-    showData(data);
-    return data;
+  .then(jsonData => {
+    //console.log(JSON.stringify(jsonData));
+    showData(jsonData);
+    return data = jsonData;
   })
   .catch(error => {
     document.getElementById('root').innerHTML = 'Error: ' + error;
@@ -34,11 +34,12 @@ const selectType = document.getElementById('type');
 
 selectType.addEventListener('change', ()=> {
   let condition = selectType.options[selectType.selectedIndex].value;
-  let filtered = window.filterType(data, condition);
-  document.getElementById('root').innerHTML = '';
+  console.log(data);
+  let filtered = window.filterType(data.pokemon, condition);
+  let filteredPokemon = '';
   console.log(filtered)
   filtered.forEach(element => {
-    document.getElementById('root').innerHTML += `<div class="card">
+    return filteredPokemon += `<div class="card">
     <img class="card-img-top" src=${element.img} alt="Card image cap">
    <div class="card-body">
      <h5 class="card-title">${element.name} #${element.id}</h5>
@@ -49,7 +50,8 @@ selectType.addEventListener('change', ()=> {
      <small class="text-muted"> Hatches from egg: ${element.egg}</small>
    </div>
  </div>`
-  })
+  });
+  document.getElementById('root').innerHTML = filteredPokemon;
 });
 
 //window.onload = showData();

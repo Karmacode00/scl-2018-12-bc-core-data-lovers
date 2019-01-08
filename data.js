@@ -34,10 +34,10 @@ const selectType = document.getElementById('type');
 
 selectType.addEventListener('change', ()=> {
   let condition = selectType.options[selectType.selectedIndex].value;
-  console.log(data);
+  //console.log(data);
   let filtered = window.filterType(data.pokemon, condition);
   let filteredPokemon = '';
-  console.log(filtered)
+  //console.log(filtered)
   filtered.forEach(element => {
     return filteredPokemon += `<div class="card">
     <img class="card-img-top" src=${element.img} alt="Card image cap">

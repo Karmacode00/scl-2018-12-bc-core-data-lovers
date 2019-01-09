@@ -56,7 +56,53 @@ const selectAll = document.getElementById('all');
 
 selectAll.addEventListener('click', ()=>{
   showData(data);
-})
+});
+
+/*const selectAlphabetic = document.getElementById('alphabetic');
+
+selectAlphabetic.addEventListener('click', ()=>{
+  let sorted = window.sortData(data, sortBy, sortOrder)
+  let sortBy = data.pokemon;
+  let sortedPokemon = '';
+  sorted.forEach(element => {
+    return sortedPokemon += `<div class="card">
+    <img class="card-img-top" src=${element.img} alt="Card image cap">
+   <div class="card-body">
+     <h5 class="card-title">${element.name} #${element.id}</h5>
+       <p class="card-text"> Type: ${element.type.join(', ')}</p>
+       <p class="card-text"> Weaknesses: ${element.weaknesses.join(', ')}</p>
+   </div>
+   <div class="card-footer">
+     <small class="text-muted"> Hatches from egg: ${element.egg}</small>
+   </div>
+ </div>`
+  });
+  document.getElementById('root').innerHTML = sortedPokemon;
+});
+*/
+
+const selectNumeric = document.getElementById('numericDes');
+
+selectNumeric.addEventListener('click', ()=>{
+  let sorted = window.sortData(data, sortBy, sortOrder)
+  let sortBy = data.pokemon.number;
+  let sortOrder = 'des';
+  let sortedPokemon = '';
+  sorted.forEach(element => {
+    return sortedPokemon += `<div class="card">
+    <img class="card-img-top" src=${element.img} alt="Card image cap">
+   <div class="card-body">
+     <h5 class="card-title">${element.name} #${element.id}</h5>
+       <p class="card-text"> Type: ${element.type.join(', ')}</p>
+       <p class="card-text"> Weaknesses: ${element.weaknesses.join(', ')}</p>
+   </div>
+   <div class="card-footer">
+     <small class="text-muted"> Hatches from egg: ${element.egg}</small>
+   </div>
+ </div>`
+  });
+  document.getElementById('root').innerHTML = sortedPokemon;
+});
 
 
 

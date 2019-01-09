@@ -34,10 +34,8 @@ const selectType = document.getElementById('type');
 
 selectType.addEventListener('change', ()=> {
   let condition = selectType.options[selectType.selectedIndex].value;
-  //console.log(data);
   let filtered = window.filterType(data.pokemon, condition);
   let filteredPokemon = '';
-  //console.log(filtered)
   filtered.forEach(element => {
     return filteredPokemon += `<div class="card">
     <img class="card-img-top" src=${element.img} alt="Card image cap">
@@ -54,28 +52,61 @@ selectType.addEventListener('change', ()=> {
   document.getElementById('root').innerHTML = filteredPokemon;
 });
 
-//window.onload = showData();
+const selectAll = document.getElementById('all');
 
+selectAll.addEventListener('click', ()=>{
+  showData(data);
+});
 
-/* esta es una función de ejemplo
-/ puedes ver como agregamos la función a nuestro objeto global window
+/*const selectAlphabetic = document.getElementById('alphabetic');
 
-const example = () => {
-  return 'example';
-};
-
-window.example = example;
+selectAlphabetic.addEventListener('click', ()=>{
+  let sorted = window.sortData(data, sortBy, sortOrder)
+  let sortBy = data.pokemon;
+  let sortedPokemon = '';
+  sorted.forEach(element => {
+    return sortedPokemon += `<div class="card">
+    <img class="card-img-top" src=${element.img} alt="Card image cap">
+   <div class="card-body">
+     <h5 class="card-title">${element.name} #${element.id}</h5>
+       <p class="card-text"> Type: ${element.type.join(', ')}</p>
+       <p class="card-text"> Weaknesses: ${element.weaknesses.join(', ')}</p>
+   </div>
+   <div class="card-footer">
+     <small class="text-muted"> Hatches from egg: ${element.egg}</small>
+   </div>
+ </div>`
+  });
+  document.getElementById('root').innerHTML = sortedPokemon;
+});
 */
 
-/* 
+const selectNumeric = document.getElementById('numericDes');
 
-window.filterData = (data, condition) => {
-data.sort
-}
+selectNumeric.addEventListener('click', ()=>{
+  let sorted = window.sortData(data, sortBy, sortOrder)
+  let sortBy = data.pokemon.number;
+  let sortOrder = 'des';
+  let sortedPokemon = '';
+  sorted.forEach(element => {
+    return sortedPokemon += `<div class="card">
+    <img class="card-img-top" src=${element.img} alt="Card image cap">
+   <div class="card-body">
+     <h5 class="card-title">${element.name} #${element.id}</h5>
+       <p class="card-text"> Type: ${element.type.join(', ')}</p>
+       <p class="card-text"> Weaknesses: ${element.weaknesses.join(', ')}</p>
+   </div>
+   <div class="card-footer">
+     <small class="text-muted"> Hatches from egg: ${element.egg}</small>
+   </div>
+ </div>`
+  });
+  document.getElementById('root').innerHTML = sortedPokemon;
+});
 
-filterData(data, condition) recibiría la data, y nos retornaría aquellos datos que 
-sí cumplan con la condición
 
+
+/*
 sortData(data, sortBy, sortOrder) El primer parámetro, data, nos entrega los datos. 
 El segundo parámetro, sortBy, nos dice con respecto a cuál de los campos de la data 
 se quiere ordenar. El tercer parámetro, sortOrder, indica si se quiere 

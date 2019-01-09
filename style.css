@@ -29,7 +29,7 @@ body{
   justify-content: space-evenly
 }
 
-#alphabetic, #numeric, #all{
+.btn{
   width: 110px;
   height: 30px;
   background: -webkit-linear-gradient(90deg, #266378 10%, #52B888  90%);

@@ -6,3 +6,20 @@ window.filterType = (data, condition) =>{
   });
   return filteredType;
 };
+
+window.sortData = (data, sortBy, sortOrder) =>{
+  let mapped = data.map(function(el, i) {
+    return { index: i, value: el.toLowerCase() };
+  });
+  
+  // sorting the mapped array containing the reduced values
+  mapped.sort(function(a, b) {
+    if (a.value > b.value) {
+      return 1;
+    }
+    if (a.value < b.value) {
+      return -1;
+    } else {
+    return 0;
+    }
+  })};

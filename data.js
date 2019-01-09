@@ -34,10 +34,8 @@ const selectType = document.getElementById('type');
 
 selectType.addEventListener('change', ()=> {
   let condition = selectType.options[selectType.selectedIndex].value;
-  //console.log(data);
   let filtered = window.filterType(data.pokemon, condition);
   let filteredPokemon = '';
-  //console.log(filtered)
   filtered.forEach(element => {
     return filteredPokemon += `<div class="card">
     <img class="card-img-top" src=${element.img} alt="Card image cap">
@@ -62,28 +60,7 @@ selectAll.addEventListener('click', ()=>{
 
 
 
-//window.onload = showData();
-
-
-/* esta es una función de ejemplo
-/ puedes ver como agregamos la función a nuestro objeto global window
-
-const example = () => {
-  return 'example';
-};
-
-window.example = example;
-*/
-
-/* 
-
-window.filterData = (data, condition) => {
-data.sort
-}
-
-filterData(data, condition) recibiría la data, y nos retornaría aquellos datos que 
-sí cumplan con la condición
-
+/*
 sortData(data, sortBy, sortOrder) El primer parámetro, data, nos entrega los datos. 
 El segundo parámetro, sortBy, nos dice con respecto a cuál de los campos de la data 
 se quiere ordenar. El tercer parámetro, sortOrder, indica si se quiere 

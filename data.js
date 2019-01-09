@@ -54,6 +54,14 @@ selectType.addEventListener('change', ()=> {
   document.getElementById('root').innerHTML = filteredPokemon;
 });
 
+const selectAll = document.getElementById('all');
+
+selectAll.addEventListener('click', ()=>{
+  showData(data);
+})
+
+
+
 //window.onload = showData();
 
 

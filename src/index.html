@@ -4,16 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
     <link rel="icon" type="image/png" href="./img/poke.ico.png" />
     <title>Pokédex</title>
   </head>
   <body>
-    <header>
+      
+    <header> <!-- inicio header -->
+    
       <section>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#" id="welcome">Welcome user!</a>
+      
+         <!--  <a class="navbar-brand" href="#" id="welcome">Welcome user!</a>  -->
+         <a class="navbar-brand" href="#"><img src="img/logopokemon.png" id="logopokemon"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -29,25 +34,29 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" id="searchpokemon">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchbutton">Search</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchbutton" >S</button>
             </form>
-          </div>
+          </div> 
         </nav>
       </section>
-    </header>
+    </header> <!-- termino header -->
   
-    <section id="titlepokedex"> 
+    <div class="container"> <!-- clase marcia -->
+
+    <section id="titlepokedex"> <!-- inicio titulo pokedex -->
       Pokédex
-    </section>
+    </section> <!-- fin titulo pokedex -->
 
     <section>
       <div>
+      <!--  <label id="order">Order</label> --> 
       <button type="button" class="btn btn-outline-success" id="alphabetic">A-Z</button>
       <button type="button" class="btn btn-outline-success" id="numericAsc">1-151</button>
       <button type="button" class="btn btn-outline-success" id="numericDes">151-1</button>
       <button type="button" class="btn btn-outline-success" id="all">All</button>
+
      <!-- <form> --> 
-        <label>Type: </label>
+     <!-- <label id="filtertext">Filter</label>  --> 
         <select id="type">
           <option>Select...</option>
           <option value="Bug">Bug</option>
@@ -70,6 +79,15 @@
       </div>
     </section>
     <div id="root"></div>   
+
+    
+  </div> <!-- clase marcia -->
+
+  <footer class="footer">
+    <div class="row">
+      <div class="col">&copy;2019 Pokémon. TM, &copy;Nintendo. </div>
+    </div>
+  </footer>
 
     <script src="./data.js"></script>
     <script src="./main.js"></script>

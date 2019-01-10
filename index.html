@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+     <!-- <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">  --> 
    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
     <link rel="icon" type="image/png" href="./img/poke.ico.png" />
     <title>Pokédex</title>
@@ -27,14 +27,17 @@
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li class="nav-item">
                 <a class="nav-link" href="https://www.pokemongo.com/en-us/" target="_blank">Official Page</a>
-              
+                
+                
               <li class="nav-item">
                 <a class="nav-link" href="https://en.wikipedia.org/wiki/Pok%C3%A9mon" target="_blank">Learn more about Pokémon</a>
               
             </ul>
             <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" id="searchpokemon">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchbutton" >S</button>
+              <input class="form-control mr-sm-2" type="search" placeholder="Pokémon by number / name" id="searchpokemon">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchbutton" >Search </button> 
+              
+              </a>
             </form>
           </div> 
         </nav>
@@ -44,22 +47,22 @@
     <div class="container"> <!-- clase marcia -->
 
     <section id="titlepokedex"> <!-- inicio titulo pokedex -->
-      Pokédex
+      ¡Find your Pokémon!
     </section> <!-- fin titulo pokedex -->
 
     <section>
-      <div>
+      <div class="buttonsection">
       <!--  <label id="order">Order</label> --> 
       <button type="button" class="selector btn btn-outline-success" id="alphabetic">A-Z</button>
       <button type="button" class="selector btn btn-outline-success" id="reverseAlphabetic">Z-A</button>
       <button type="button" class="selector btn btn-outline-success" id="numericAsc">1-151</button>
       <button type="button" class="selector btn btn-outline-success" id="numericDes">151-1</button>
-      <button type="button" class="selector btn btn-outline-success" id="all">All</button>
+    <!--    <button type="button" class="selector btn btn-outline-success" id="all">Show all</button> -->
 
      <!-- <form> --> 
      <!-- <label id="filtertext">Filter</label>  --> 
-        <select class="selector" id="type">
-          <option>Select...</option>
+        <select class="filterselector" id="type">
+          <option>Filter by type</option>
           <option value="Bug">Bug</option>
           <option value="Dragon">Dragon</option>
           <option value="Ice">Ice</option>
@@ -77,8 +80,13 @@
           <option value="Water">Water</option>
         </select>
    <!--   </form> --> 
+
+   <button type="button" class="filterselector btn btn-outline-success" id="all">Show all</button>
+      
       </div>
     </section>
+
+    
     <div id="root"></div>   
 
     

@@ -56,5 +56,9 @@ sortData: (data, sortBy, sortOrder) =>{
     })
     return sortedName;
   }
-}
+},
+
+computeStats: (data) => {
+  return data.length;
+  }
 }

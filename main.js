@@ -14,6 +14,7 @@ fetch(pokemones)
 const showData = (data) => {
   let groupPokemon = '';
   let dataPokedex = data.pokemon;
+  let computedPokemon = window.pokemon.computeStats(dataPokedex);
     dataPokedex.forEach(function(element) { 
       return groupPokemon += `<div class="card">
            <img class="card-img-top" src=${element.img} alt="Card image cap">
@@ -28,6 +29,7 @@ const showData = (data) => {
         </div>`
     });
     document.getElementById('root').innerHTML = groupPokemon;
+    document.getElementById('computed').innerHTML = `${computedPokemon}`;
 };
 
 const selectType = document.getElementById('type');
@@ -36,6 +38,7 @@ selectType.addEventListener('change', ()=> {
   let condition = selectType.options[selectType.selectedIndex].value;
   let filtered = window.pokemon.filterType(data.pokemon, condition);
   let filteredPokemon = '';
+  let computedPokemon = window.pokemon.computeStats(filtered);
   filtered.forEach(element => {
     return filteredPokemon += `<div class="card">
     <img class="card-img-top" src=${element.img} alt="Card image cap">
@@ -50,6 +53,7 @@ selectType.addEventListener('change', ()=> {
  </div>`
   });
   document.getElementById('root').innerHTML = filteredPokemon;
+  document.getElementById('computed').innerHTML = `${computedPokemon}`;
 });
 
 const selectAll = document.getElementById('all');
@@ -63,7 +67,8 @@ const sortAlphabeticAsc = document.getElementById('alphabetic');
 sortAlphabeticAsc.addEventListener('click', ()=>{
   let sortBy = 'name';
   let sortOrder = 'asc';
-  let sorted = window.pokemon.sortData(data.pokemon, sortBy, sortOrder)
+  let sorted = window.pokemon.sortData(data.pokemon, sortBy, sortOrder);
+  let computedPokemon = window.pokemon.computeStats(sorted);
   let sortedPokemon = '';
   sorted.forEach(element => {
     return sortedPokemon += `<div class="card">
@@ -79,6 +84,7 @@ sortAlphabeticAsc.addEventListener('click', ()=>{
  </div>`
   });
   document.getElementById('root').innerHTML = sortedPokemon;
+  document.getElementById('computed').innerHTML = `${computedPokemon}`;
 });
 
 const sortAlphabeticDes = document.getElementById('reverseAlphabetic');
@@ -86,7 +92,8 @@ const sortAlphabeticDes = document.getElementById('reverseAlphabetic');
 sortAlphabeticDes.addEventListener('click', ()=>{
   let sortBy = 'name';
   let sortOrder = 'des';
-  let sorted = window.pokemon.sortData(data.pokemon, sortBy, sortOrder)
+  let sorted = window.pokemon.sortData(data.pokemon, sortBy, sortOrder);
+  let computedPokemon = window.pokemon.computeStats(sorted);
   let sortedPokemon = '';
   sorted.forEach(element => {
     return sortedPokemon += `<div class="card">
@@ -102,6 +109,7 @@ sortAlphabeticDes.addEventListener('click', ()=>{
  </div>`
   });
   document.getElementById('root').innerHTML = sortedPokemon;
+  document.getElementById('computed').innerHTML = `${computedPokemon}`;
 });
 
 const sortNumericAsc = document.getElementById('numericAsc');
@@ -109,7 +117,8 @@ const sortNumericAsc = document.getElementById('numericAsc');
 sortNumericAsc.addEventListener('click', ()=>{
   let sortBy = 'num';
   let sortOrder = 'asc';
-  let sorted = window.pokemon.sortData(data.pokemon, sortBy, sortOrder)
+  let sorted = window.pokemon.sortData(data.pokemon, sortBy, sortOrder);
+  let computedPokemon = window.pokemon.computeStats(sorted);
   let sortedPokemon = '';
   sorted.forEach(element => {
     return sortedPokemon += `<div class="card">
@@ -125,6 +134,7 @@ sortNumericAsc.addEventListener('click', ()=>{
  </div>`
   });
   document.getElementById('root').innerHTML = sortedPokemon;
+  document.getElementById('computed').innerHTML = `${computedPokemon}`;
 });
 
 const sortNumericDes = document.getElementById('numericDes');
@@ -132,7 +142,8 @@ const sortNumericDes = document.getElementById('numericDes');
 sortNumericDes.addEventListener('click', ()=>{
   let sortBy = 'num';
   let sortOrder = 'des';
-  let sorted = window.pokemon.sortData(data.pokemon, sortBy, sortOrder)
+  let sorted = window.pokemon.sortData(data.pokemon, sortBy, sortOrder);
+  let computedPokemon = window.pokemon.computeStats(sorted);
   let sortedPokemon = '';
   sorted.forEach(element => {
     return sortedPokemon += `<div class="card">
@@ -148,13 +159,7 @@ sortNumericDes.addEventListener('click', ()=>{
  </div>`
   });
   document.getElementById('root').innerHTML = sortedPokemon;
+  document.getElementById('computed').innerHTML = `${computedPokemon}`;
 });
 
-
-
-/*
-
-computeStats(data) nos permitirá hacer cálculos estadísticos básicos para ser
- mostrados de acuerdo a la data proporcionada.
-*/
 

@@ -162,4 +162,24 @@ sortNumericDes.addEventListener('click', ()=>{
   document.getElementById('computed').innerHTML = `${computedPokemon}`;
 });
 
+/*const searchBy = document.getElementById('searchbutton');
 
+searchBy.addEventListener('click', ()=>{
+  let searched = window.pokemon.searchPokemon(data.pokemon, searchBar);
+  let searchBar = document.getElementById('searchpokemon').value;
+  let searchedPokemon = '';
+  searched.forEach(element => {
+    return searchedPokemon += `<div class="card">
+    <img class="card-img-top" src=${element.img} alt="Card image cap">
+   <div class="card-body">
+     <h5 class="card-title">${element.name} #${element.id}</h5>
+       <p class="card-text"> Type: ${element.type.join(', ')}</p>
+       <p class="card-text"> Weaknesses: ${element.weaknesses.join(', ')}</p>
+   </div>
+   <div class="card-footer">
+     <small class="text-muted"> Hatches from egg: ${element.egg}</small>
+   </div>
+ </div>`
+  });
+  document.getElementById('root').innerHTML = searchedPokemon;
+})*/

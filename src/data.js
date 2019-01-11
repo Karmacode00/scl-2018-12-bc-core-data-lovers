@@ -12,7 +12,7 @@ sortData: (data, sortBy, sortOrder) =>{
       if (a.num < b.num) {
         return 1;
       }
-      if (a.num > b.num) {
+      else if (a.num > b.num) {
         return -1;
       } else {
       return 0;
@@ -24,7 +24,7 @@ sortData: (data, sortBy, sortOrder) =>{
       if (a.num > b.num) {
         return 1;
       }
-      if (a.num < b.num) {
+      else if (a.num < b.num) {
         return -1;
       } else {
       return 0;
@@ -36,7 +36,7 @@ sortData: (data, sortBy, sortOrder) =>{
       if (a.name < b.name) {
         return 1;
       }
-      if (a.name > b.name) {
+      else if (a.name > b.name) {
         return -1;
       } else {
       return 0;
@@ -48,7 +48,7 @@ sortData: (data, sortBy, sortOrder) =>{
       if (a.name > b.name) {
         return 1;
       }
-      if (a.name < b.name) {
+      else if (a.name < b.name) {
         return -1;
       } else {
       return 0;
@@ -60,5 +60,9 @@ sortData: (data, sortBy, sortOrder) =>{
 
 computeStats: (data) => {
   return data.length;
-  }
+},
+
+/*
+searchPokemon: (data, searchBar) => {
+}*/
 }

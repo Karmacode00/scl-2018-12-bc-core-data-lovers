@@ -17,5 +17,9 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "jest": "^23.6.0"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true 
   }
 }

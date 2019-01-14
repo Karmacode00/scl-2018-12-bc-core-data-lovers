@@ -10,7 +10,7 @@ fetch(pokemones)
   .catch(error => {
     document.getElementById('root').innerHTML = 'Error: ' + error;
   });
- 
+
 const showData = (data) => {
   let groupPokemon = '';
   let dataPokedex = data.pokemon;

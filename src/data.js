@@ -14,8 +14,6 @@ sortData: (data, sortBy, sortOrder) =>{
       }
       else if (a.num > b.num) {
         return -1;
-      } else {
-      return 0;
       }
     })
     return sortedNum;
@@ -26,9 +24,7 @@ sortData: (data, sortBy, sortOrder) =>{
       }
       else if (a.num < b.num) {
         return -1;
-      } else {
-      return 0;
-      }
+      } 
     })
     return sortedNum;
   }else if(sortBy === 'name' && sortOrder === 'des'){
@@ -38,9 +34,7 @@ sortData: (data, sortBy, sortOrder) =>{
       }
       else if (a.name > b.name) {
         return -1;
-      } else {
-      return 0;
-      }
+      } 
     })
     return sortedName;
   }else if(sortBy === 'name' && sortOrder === 'asc'){
@@ -50,9 +44,7 @@ sortData: (data, sortBy, sortOrder) =>{
       }
       else if (a.name < b.name) {
         return -1;
-      } else {
-      return 0;
-      }
+      } 
     })
     return sortedName;
   }
